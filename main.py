@@ -39,7 +39,7 @@ def load_dataset(data_link):
     dataset = pd.read_csv(data_link)
     return dataset
 
-data_link = "C:\\Users\\nisht\\streamlit projects\\vgsales.csv"
+data_link = "vgsales.csv"
 data = load_dataset(data_link)
 data=data.drop(columns=["JP_Sales","Other_Sales"])
 my_data=data
