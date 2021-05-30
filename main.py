@@ -12,6 +12,7 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 st.subheader('Developed with ❤ by [Nishaanth K](https://www.linkedin.com/in/nishaanth-k)')
 
+#Spotlighted
 st.subheader("⭐️**Spotlighted**")
 col1 , col2 ,col3 = st.beta_columns(3)
 col1.subheader("Best Ranked Game")
@@ -39,12 +40,14 @@ def load_dataset(data_link):
     dataset = pd.read_csv(data_link)
     return dataset
 
+#Initialized Data
 data_link = "vgsales.csv"
 data = load_dataset(data_link)
 data=data.drop(columns=["JP_Sales","Other_Sales"])
 my_data=data
 data=data[data["Rank"] <= 50]
 
+#Chart-1
 st.subheader("📊**Top 10 Games Sales**")
 new=data.set_index("Name")
 new=new[new["Rank"]<=10]
@@ -54,6 +57,7 @@ for news in new:
 
 st.area_chart(news)
 
+#chart-2
 st.subheader("📊**Genre Based in Years**")
 new=data.set_index("Year")
 un_1=["Publisher","Platform","Global_Sales","Rank","Name","NA_Sales","EU_Sales"]
@@ -62,6 +66,7 @@ for news in new:
 
 st.bar_chart(news)
 
+#Chart-3
 st.subheader("📊**Year based Games Sales**")
 new=my_data.set_index("Year")
 un_1=["Publisher","Platform","Rank","Genre","Name","NA_Sales","EU_Sales"]
@@ -70,10 +75,12 @@ for news in new:
 
 st.line_chart(news)
 
+#Table
 top=data[data["Rank"]<=25]
 st.header("**♛Top 25 Ranking Games**")
 st.table(top)
 
+#Insights
 st.subheader("✨**Some of Insights**")
 col1, col2 = st.beta_columns(2)
 with col1:
