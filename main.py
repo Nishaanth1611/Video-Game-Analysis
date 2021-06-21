@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
-st.set_page_config(page_title="Video Games Analysis", page_icon="🎮",layout="centered", initial_sidebar_state='expanded')
+st.set_page_config(page_title="Video Games Analysis", page_icon="🎮",layout="wide", initial_sidebar_state='expanded')
 st.title("📈Video Games Analysis")
 hide_streamlit_style = """
             <style>
