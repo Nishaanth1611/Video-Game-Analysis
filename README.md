@@ -4,4 +4,4 @@
 
 ## This Application is hosted in Heroku 
 
-## Visit the application [Here](https://video-game-sales-analysis.herokuapp.com/)
+## Visit the application [Here](https://video-game-analysis-nish.herokuapp.com/)
